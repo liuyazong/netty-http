@@ -1,23 +1,25 @@
 package yz.web;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
-import javax.ws.rs.QueryParam;
+import org.springframework.context.ApplicationContext;
+
+import javax.ws.rs.*;
+import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
+import java.util.List;
 
 /**
  * author: liuyazong
  * datetime: 2017/7/20 下午3:17
  */
-@Path("test")
+@Path("hello")
 public class Hello {
 
     @GET
-    @Path("test")
+    @Path("{sth}")
     @Produces(MediaType.TEXT_PLAIN)
-    public String hello(@QueryParam(value = "sth") String sth) {
-        String result = "Hello,".concat(sth.toUpperCase());
-        return result;
+    public String hello(@PathParam(value = "sth") String sth,
+                        @QueryParam("a") List<String> a,
+                        @QueryParam("b") String b) {
+        return "Hello,".concat(sth.toUpperCase()).concat(",a=" + a).concat(",b=" + b);
     }
 }

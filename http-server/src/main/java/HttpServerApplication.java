@@ -1,9 +1,6 @@
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import yz.aop.LogApj;
 import yz.config.AppConfig;
-import yz.server.HttpServer;
 import yz.server.JerseyHttpServer;
-import yz.web.Hello;
 
 /**
  * author: liuyazong

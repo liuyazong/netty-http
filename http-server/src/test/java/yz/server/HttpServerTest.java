@@ -21,7 +21,7 @@ public class HttpServerTest {
 
     @Test
     public void test() throws InterruptedException {
-        //httpServer.start();
+//        httpServer.start();
         jerseyHttpServer.start();
     }
 

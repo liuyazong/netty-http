@@ -19,8 +19,7 @@ public class LogApj {
     public Object around(ProceedingJoinPoint point) throws Throwable {
         Object[] args = point.getArgs();
         Object result = point.proceed(args);
-        Object target = point.getTarget();
-        log.debug("args:{},result:{},target:{}",args,result,target);
+        log.debug("args:{},result:{}", args, result);
         return result;
     }
 }

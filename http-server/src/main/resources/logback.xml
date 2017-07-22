@@ -3,7 +3,7 @@
     <property name="log_path" value="./"/>
     <property name="app" value="netty-http"/>
     <property name="pattern"
-              value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %5level %logger{15}.%method line %line - %m%n"/>
+              value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %5level %logger{15}#%line - %m%n"/>
     <contextName>${app}</contextName>
 
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
@@ -29,7 +29,7 @@
     <logger name="org.springframework" level="ERROR"/>
     <logger name="org.hibernate" level="ERROR"/>
     <logger name="org.jboss" level="ERROR"/>
-    <logger name="org.glassfish.jersey" level="DEBUG"/>
+    <logger name="org.glassfish.jersey" level="ERROR"/>
 
     <logger name="yz" level="DEBUG"/>
 
